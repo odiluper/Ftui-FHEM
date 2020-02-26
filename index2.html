@@ -52,29 +52,6 @@
                     </div>
                 </div>
             </li>
-            <li data-row="2" data-col="1" data-sizex="1" data-sizey="4">
-                <header>GARTEN</header>
-                <div class="sheet">
-                    <div class="row">
-                        <div class="cell">
-                            <div data-type="switch" data-device="GartenLicht" class=""></div>
-                            <div data-type="label" class="">Licht</div>
-                            <div data-type="symbol" data-device="Eingangstuer" class="big"></div>
-                            <div data-type="label" class="">T&#252;r</div>
-                            <div data-type="label" data-device="OutTemp" data-part="2" data-fix="1" data-limits='[-73,10,23]' data-colors='["#6699FF","#AA6900","#FF0000"]' data-unit="%B0C%0A" class="bigger thin top-space-2x"></div>
-                            <div data-type="label" class="">Temperatur</div>
-                            <div data-type="label" class=" darker top-space">Heute</div>
-                            <div data-type="weather" data-device="AgroWeather" data-get="fc0_weatherDay" class=" big"></div>
-                            <div data-type="label" data-device="AgroWeather" data-get="fc0_weatherDay" class="narrow"></div>
-                            <div data-type="label" data-device="AgroWeather" data-get="fc0_tempMax" data-unit="%B0C%0A" class="large"></div>
-                            <div data-type="label" class="darker top-space">Morgen</div>
-                            <div data-type="weather" data-device="AgroWeather" data-get="fc1_weatherDay" class="big"></div>
-                            <div data-type="label" data-device="AgroWeather" data-get="fc1_weatherDay" class="narrow"></div>
-                            <div data-type="label" data-device="AgroWeather" data-get="fc1_tempMax" data-unit="%B0C%0A" class="large"></div>
-                        </div>
-                    </div>
-                </div>
-            </li>
             <li data-row="1" data-col="2" data-sizey="3" data-sizex="3">
                    <header>Temp-Wohnzimmer</header>
 		    <div class="normal"
@@ -118,91 +95,6 @@
  			class="">
 		</div>
 	    </li>
-            </li>
-            <li data-row="1" data-col="4" data-sizey="1" data-sizex="2">
-                <header>KINDERZIMMER</header>
-                <div class="sheet">
-                    <div class="row">
-                        <div class="cell" data-type="thermostat" data-device="KinderzimmerHeizung_Clima" data-valve="ValvePosition"></div>
-                        <div class="cell">
-                            <div class="big" data-type="symbol" data-device="KinderzimmerFenster"></div>
-                            <div class="top-narrow  darker small">Fenster</div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li data-row="2" data-col="2" data-sizey="2" data-sizex="2">
-                <header>KUECHE</header>
-                <div class="sheet">
-                    <div class="row">
-                        <div class="cell" data-type="thermostat" data-device="KuecheHeizung_Clima" data-valve="ValvePosition"></div>
-                        <div class="cell">
-                            <div data-type="switch" data-device="HerdLicht_Sw"></div>
-                            <div data-type="label">HerdLicht</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="cell" data-type="thermostat" data-device="KuecheHeizung2_Clima" data-valve="ValvePosition"></div>
-                        <div class="cell">
-                            <div class="big" data-type="symbol" data-device="KuechenFenster"></div>
-                            <div class="top-narrow  darker small">Fenster</div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li data-row="4" data-col="2" data-sizey="2" data-sizex="2">
-                <header>HOMESTATUS</header>
-                <div class="sheet">
-                    <div class="row">
-                        <div data-type="homestatus" data-device='HomeStatus' data-version='' class="cell"></div>
-                    </div>
-                </div>
-            </li>
-            <li data-row="2" data-col="4" data-sizey="2" data-sizex="4">
-                <header>WOHNZIMMER</header>
-                <div class="sheet">
-                    <div class="row">
-                        <div class="cell" data-type="thermostat" data-device="WohnzimmerHeizung_Clima" data-valve="ValvePosition" data-get="desired-temp" data-temp="measured-temp"></div>
-                        <div class="cell">
-                            <div data-type="label" data-device="THSensorWZ" data-get="temperature" data-limits='[-73,19,23]' data-colors='["#6699FF","#aa6900","#bb6242"]' data-unit="%B0C%0A" class="bigger thin"></div>
-                            <div>Temperatur</div>
-                        </div>
-                        <div class="cell">
-                            <div data-type="label" data-device="THSensorWZ" data-fix="0" data-part="4" data-limits='[0,40,60]' data-colors='["#bb6242","#aa6900","#bb6242"]' data-unit="%" class="bigger thin"></div>
-                            <div>Luftfeuchte</div>
-                        </div>
-                        <div class="cell">
-                            <div data-type="switch" data-device="PowerAV_Sw" class=""></div>
-                            <div>SchrankLicht</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="cell" data-type="thermostat" data-device="WohnzimmerHeizung2_Clima" data-valve="ValvePosition" data-get="desired-temp" data-temp="measured-temp"></div>
-                        <div class="cell" data-type="popup" data-width="450px">
-                            <div data-type="simplechart" data-device="THSensorWZ" data-logdevice="FileLog_THSensorWZ" data-columnspec="4:temperature" data-minvalue="15" data-maxvalue="25" data-height="60" data-width="90" class="noticks">
-                            </div>
-                            <div class="dialog">
-                                <header>TEMPERATURE</header>
-                                <div data-type="simplechart" data-device="THSensorWZ" data-logdevice="FileLog_THSensorWZ" data-columnspec="4:temperature" data-minvalue="15" data-maxvalue="25" data-yticks="2" data-height="250">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cell" data-type="popup" data-width="450px">
-                            <div data-type="simplechart" data-device="THSensorWZ" data-logdevice="FileLog_THSensorWZ" data-columnspec="4:humidity" data-minvalue="0" data-maxvalue="100" data-height="60" data-width="90" class="noticks">
-                            </div>
-                            <div class="dialog">
-                                <header>HUMIDITY</header>
-                                <div data-type="simplechart" data-device="THSensorWZ" data-logdevice="FileLog_THSensorWZ" data-columnspec="4:humidity" data-minvalue="0" data-maxvalue="100" data-yticks="20" data-height="250">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cell">
-                            <div data-type="dimmer" data-device="HUEDevice1" data-get-on="!off" data-get-off="off" data-set="pct"></div>
-                            <div>Philips</div>
-                        </div>
-
-                    </div>
-                </div>
             </li>
             <li data-row="4" data-col="4" data-sizey="2" data-sizex="4">
                 <header>MULTIMEDIA</header>
