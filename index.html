@@ -1,0 +1,245 @@
+<!DOCTYPE html> <html> <head>
+    <!--
+     /* FHEM tablet ui */
+     /*
+     * UI builder framework for FHEM
+     *
+     * Version: 2.5.*
+     * URL: https://github.com/knowthelist/fhem-tablet-ui
+     *
+     * Copyright (c) 2015-2017 Mario Stephan <mstephan@shared-files.de>
+     * Under MIT License (http://www.opensource.org/licenses/mit-license.php)
+     *
+     * - create a new folder named 'tablet' in /<fhem-path>/www
+     * - copy all files incl. sub folders into /<fhem-path>/www/tablet
+     * - add 'define TABLETUI HTTPSRV ftui ./www/tablet Tablet' in fhem.cfg
+     * - Tadaaa! A new fhem ui in http://<fhem-url>:8083/fhem/tablet/
+     */
+    -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- define your personal style here, it wont be overwritten -->
+    <!-- link rel="stylesheet" href="css/fhem-green-ui.css" / -->
+    <!-- link rel="stylesheet" href="css/fhem-tablet-ui-user.css" / -->
+    <script src="js/fhem-tablet-ui.js" defer></script>
+    <!-- Remove this line to enable for usage with WebViewControl
+    <script defer>var wvcDevices = {'12345': 'Tablet'}; var wvcUserCssFile="webviewcontrol.css"</script>
+    <script src="../pgm2/cordova-2.3.0.js" defer></script>
+    <script src="../pgm2/webviewcontrol.js" defer></script>
+    <!-- End for WebViewControl -->
+    <title>FHEM-Tablet-UI</title> </head> <body>
+    <div class="gridster">
+        <ul>
+            </li>
+            <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+                <header>AUSSEN</header>
+                <div class="sheet">
+			 <div class="row">
+			 <div class="cell">
+                            <div class="display-center big" data-type="label" data-device="Sonoff_Temp" data-value="DS18B20_Temperature"></div>
+                            <div class="display-bottomcenter bottom-space-2" data-type="label" class="">Temperatur</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+       	   <li data-row="1" data-col="2" data-sizey="1" data-sizex="1">
+               <header>WOHNZIMMER</header>
+                <div class="sheet">
+                    <div class="row">
+                        <div class="cell" data-type="thermostat" data-device="ThermostatWohnzimmer" data-valve="ValvePosition"></div>
+                    </div>
+                </div>
+            </li>
+            </li>
+            <li data-row="1" data-col="3" data-sizey="1" data-sizex="1">
+                <header>BAD</header>
+                <div class="sheet">
+                    <div class="row">
+                        <div class="cell" data-type="thermostat" data-device="Thermostat_Bad" data-valve="ValvePosition"></div>
+                    </div>
+                </div>
+            </li>
+            <li data-row="1" data-col="4" data-sizey="1" data-sizex="1">
+                <header>SCHLAFZIMMER</header>
+                <div class="sheet">
+                    <div class="row">
+                        <div class="cell" data-type="thermostat" data-device="Thermostat_Schlafzimmer" data-valve="ValvePosition"></div>
+                    </div>
+                </div>
+            </li>
+            <li data-row="1" data-col="5" data-sizey="1" data-sizex="1">
+                <header>SCHLAFZIMMER-NEUBAU</header>
+                <div class="sheet">
+                    <div class="row">
+                        <div class="cell" data-type="thermostat" data-device="ThermostatSchlafzimmerNeubau_Clima" data-valve="ValvePosition"></div>
+                    </div>
+                </div>
+            </li>
+	    <li data-row="1" data-col="6" data-sizey="1" data-sizex="1">
+                <header>ESSZIMMER</header>
+                <div class="sheet">
+                    <div class="row">
+                        <div class="cell" data-type="thermostat" data-device="ThermostatEsszimmer" data-valve="ValvePosition"></div>
+                    </div>
+                </div>
+            </li>
+            <li data-row="1" data-col="7" data-sizey="1" data-sizex="2">
+                <header>UHR</header>
+					<div class="row"></div>
+					<div class="bigger orange" data-type="clock"></div>
+					<div data-type="clock" data-format="l, j. F Y"></div>
+            </li>
+            <li data-row="2" data-col="1" data-sizey="4" data-sizex="1">
+                <header>MENU</header>
+		  
+            </li>
+            <li data-row="2" data-col="2" data-sizey="2" data-sizex="1">
+                <header>KÜCHE</header>    
+                     <div class="top-space">	
+                            <div class="cell">
+                            <div data-type="switch" data-device="Alle_Esszimmer_Lampen"></div>
+                            <div data-type="label">Ambiente</div>
+                            </div>  </div>
+		    <div class="row">	
+		      <div class="top-space">	
+			<div class="cell">	
+                            <div data-type="switch" data-device="ez_lampe_stein"></div>
+                            <div data-type="label">Stein</div>
+                        </div> </div>
+		    <div class="row">
+		       <div class="top-space">	
+			<div class="cell">
+                            <div data-type="switch" data-device="ez_lampe_wand"></div>
+                            <div data-type="label">Wand</div>
+                        </div>
+		    </div>
+            </li>
+	    <li data-row="2" data-col="3" data-sizey="2" data-sizex="1">
+                <header>GARAGE</header>
+                     <div class="top-space-2">
+                            <div class="cell">
+                            <div data-type="switch" data-device="Sonoff_Garage" data-icon="oa-fts_garage"></div>
+                            <div data-type="label">Door</div>
+                            </div>  </div>
+ 		     <div class="row">
+                        <div class="top-space">
+                         <div class="cell">
+                         <div data-type="label" data-device="g_status_door"  data-value="STATE" data-states='["open","closed"]' data-colors='["SeaGreen","Crimson"]'></div>
+                            <div data-type="label" class=""></div>
+                         </div>
+                     </div>
+                    <div class="row">
+                      <div class="display-bottomcenter bottom-space-3">
+                        <div class="cell">
+			   <div data-type="label" data-device="Sonoff_Garage" data-value="DHT11_Temperature"></div>
+                           <div data-type="label" class=""></div>
+                        </div> 
+		 </div>
+            </li>
+            <li data-row="2" data-col="4" data-sizey="2" data-sizex="1">
+                <header>BÜRO</header>
+		 <div class="top-space-2">
+		 
+                <div class="sheet">
+		   
+                    <div class="row"> 
+    			<div class="triplebox-v inline">
+			        <div data-type="push" data-device="b_rolladen"data-icon="fa-chevron-up" data-background-icon="fa-square-o"data-set-on="off">
+        			</div>
+        			<div data-type="push" data-device="b_rolladen" data-icon="fa-minus" data-background-icon="fa-square-o"data-set-on="stop">
+                       	 	</div>
+        			<div data-type="push" data-device="b_rolladen" data-icon="fa-chevron-down" data-background-icon="fa-square-o" data-set-on="on">
+        			</div>
+    			</div>
+    			<div class="inline">
+			  <div class="row">
+        		  <div class="bottom-space-2x">open</div>
+        		  <div class="bottom-space-2x">stop</div>
+        		  <div class="top-space">close</div>
+    			</div>
+			<div class="row"></div>
+			<div class="display-bottomcenter bottom-space-3 large orange" class="">Status</div> 
+			<div class="display-bottomcenter bottom-space-2" data-type="label"  data-device="b_rolladen" data-value="pct"></div>
+                    </div>
+                  </div>
+                </li>
+		<li data-row="2" data-col="5" data-sizey="2" data-sizex="1">
+                <header>SCHLAFZIMMER-NEUBAU</header>
+		   <div class="top-space-2">
+                    <div class="sheet">
+			<div class="row">
+                                <div class="triplebox-v inline">
+                                <div data-type="push" data-device="sznb_rolladen" data-icon="fa-chevron-up" data-background-icon="fa-square-o"data-set-on="off">
+				</div>
+                                <div data-type="push" data-device="sznb_rolladen" data-icon="fa-minus"data-background-icon="fa-square-o" data-set-on="stop">
+				</div>
+                                <div data-type="push" data-device="sznb_rolladen" data-icon="fa-chevron-down" data-background-icon="fa-square-o" data-set-on="on">
+                               </div> 
+                     </div>
+                        <div class="inline">
+			 <div class="row">
+                          <div class="bottom-space-2x">open</div>
+                          <div class="bottom-space-2x">stop</div>
+                          <div class="top-space">close</div>
+                        </div>
+		        <div class="row"></div>
+                        <div class="display-bottomcenter bottom-space-3 large orange" class="">Status</div>
+                        <div class="display-bottomcenter bottom-space-2" data-type="label"  data-device="sznb_rolladen" data-value="pct"></div>
+                      </div>
+                    </div>
+            </li>
+            <li data-row="2" data-col="6" data-sizey="2" data-sizex="2">
+                <header>MULTIMEDIA</header>
+                     <div class="sheet">
+			<div class="row">   
+			  <div class="sheet">
+				 <div class="row">
+                                    <div class="cell-30">Badradio</div> 
+                                    <div class="cell-15" data-type="switch" data-device="bd_radio" data-icon="fa-music"></div>
+                                    <div class="cell-55" data-type="select" data-device="bd_radio" data-items='["internetradio","spotify","fm"]' data-get="input" data-set="input"></div>
+                                 </div>
+                            </div>
+                          </div> 
+			
+			<div class="sheet">
+			   <div class="cell"> 
+                            	    <div class="large top-space" data-type="volume" data-device='bd_radio' data-get='volume' data-set='volume'></div>
+                           </div>
+                         </div>
+                     </div>
+                  
+            </li>
+            <li data-row="2" data-col="6" data-sizey="2" data-sizex="1">
+                <header>WOHNZIMMER</header>
+                <div class="sheet">
+                    <div class="row"> 
+			<div class="top-space top-space-3">
+                        <div class="cell">
+                            <div data-type="dimmer" data-device="wz_lampe_dim" data-get-on="!off" data-get-off="off" data-set="pct" class=""></div>
+                            <div>Licht</div>
+                        </div>
+                    </div>
+		    <div class="row">
+			<div class="cell">
+				<div class=""></div>
+			</div>
+		    </div> 	
+		    <div class="row">
+                       <div class="display-bottomcenter bottom-space-3">
+                       <div class="cell">
+                           <div data-type="dimmer" data-device="wz_stehlampe_dim" data-get-on="!off" data-get-off="off" data-set="pct" class="" data-icon="oa-light_floor_lamp" ></div>
+                           <div>Stehlampe</div>
+                       </div>
+                   </div>
+                </div> 
+	     </li>
+	   <li data-row="4" data-col="2" data-sizey="2" data-sizex="4">
+	       <header>WETTER</header> 	
+	    	<div data-type="image" data-url="http://www.yr.no/place/Austria/Styria/P%C3%B6llau~7872359/meteogram.png" data-size="900px"></div>			
+	   </li>
+           <li data-row="4" data-col="6" data-sizey="2" data-sizex="3">
+               <header>WEBCAM</header>
+	<!-- 	<div data-type="image" data-url="https://10.0.0.50:8083/fhem/snapshots/Snowguide.jpg" data-size="400px" data-refresh="5" class="nocache"> </div> -->
+           </li>
+	
+        </ul>
+    </div> </body> </html>
